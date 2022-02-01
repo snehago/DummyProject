@@ -1,0 +1,672 @@
+<html>
+<head>
+<title>Project</title>
+</head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+}
+body {
+font-family:arial,helvetica,sans-serif;
+background-color:pink;
+margin-left:150px;
+}
+nav{
+position:relative;
+margin: auto 0;
+width:80%;
+height:50px;
+margin-left:20px;
+
+border-radius:3px;
+font-size:0;
+border:1px solid black;
+background-color:black;
+color:white;
+
+}
+nav a {
+font-size:15px;
+color:white;
+margin:0;
+width:100px;
+text-transfore:uppercase;
+color:black;
+text-decoration:none;
+line-height:50px;
+position:relative;
+z-index:1;
+display:inline-block;
+text-align:center;
+
+}
+a:nth-child(1) {
+width:100px;
+float:left;
+color:white;
+
+
+}
+a:nth-child(2) {
+width:100px;
+
+color:white;
+}
+a:nth-child(3) {
+width:100px;
+color:white;
+}
+a:nth-child(4) {
+width:100px;
+color:white;
+}
+a:nth-child(5) {
+width:100px;
+color:white;
+}
+a:nth-child(6) {
+width:100px;
+color:white;
+
+}
+a:nth-child(7) {
+width:100px;
+color:white;
+}
+button {
+width:100px;
+padding:5px;
+margin-left:300px;
+}
+.header {
+color:blue;
+height:50px;
+display:inline;
+}
+.inlineul{
+display:inline-flex;
+marign:auto;
+border:none;
+}
+.output {
+display:inline-flex;
+position:right;
+backround-color:black;
+}
+h1 {
+font-size:30px;
+margin:top;
+}
+p1,p2,p3 {
+margin-top:30px;
+color:black;
+}
+i {
+margin-top:10px;
+}
+span {
+margin-top:20px;
+color:black;
+height:20px;
+background-color:yellow;
+text-transfore:uppercase;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container{
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+
+}
+
+.slideshow-container2{
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+text-align:center;
+justify-content:center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+ .research {
+background-color:blue;
+width:60%;
+height:300px;
+border:none;
+text-align:left;
+margin-left:280px;
+padding:30px;
+border-bottom:3px  solid gray;
+}
+ .creative{
+background-color:blue;
+width:60%;
+height:300px;
+border:none;
+text-align:left;
+margin-left:280px;
+padding:30px;
+border-bottom:3px  solid gray;
+}
+ .reliable {
+background-color:blue;
+width:60%;
+height:300px;
+border:none;
+text-align:left;
+margin-left:280px;
+padding:30px;
+border-bottom:3px  solid gray;
+}
+.professional {
+background-color:blue;
+width:60%;
+height:300px;
+border:none;
+text-align:left;
+margin-left:280px;
+padding:30px;
+border-bottom:3px  solid gray;
+}
+.free {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:280px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid gray;
+}
+.qualified{
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:280px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid gray;
+}
+.extensive {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:280px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid gray;
+}
+.customer {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:280px;
+padding:30px;
+border-bottom:3px  solid blue;
+}
+.about {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:280px;
+padding:30px;
+border:none;
+}
+button {
+text-align:left;
+color:white;
+width:100px;
+height:40px;
+justify-content:left;
+background-color:blue;
+float:left;
+}
+.fa {
+color:blue;
+font-size:20px;
+
+}
+.process {
+background-color:white;
+width:60%;
+height:30px;
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+.management {
+background-color:white;
+width:60%;
+height:30px;
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+.hr {
+background-color:white;
+width:60%;
+height:30px;
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+.marketing {
+background-color:white;
+width:60%;
+height:30px;
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+
+}
+.process {
+background-color:white;
+width:60%;
+height:30px;
+
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+.process {
+background-color:white;
+width:60%;
+height:30px;
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+.process {
+background-color:white;
+width:60%;
+height:30px;
+
+text-align:left;
+margin-left:200px;
+padding:30px;
+text-decoration-line:underline;
+}
+ 
+.help {
+background-color:blue;
+}
+.noster {
+background-color:gray;
+}
+
+.road {
+background-color:gray;
+width:60%;
+height:800px;
+text-align:center;
+margin-left:200px;
+padding:30px;
+border-bottom:3px solid white;
+}
+
+</style>
+<body>
+<div class="container">
+<div class="header">
+<div class="inlineul">
+
+<h1 style=" font-size:40px"><i class="fa fa-align-justify">&nbsp&nbsp&nbspBusiness</i> </h1>
+</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>Free</span><p3>company</p3>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fa fa-phone"></i>&nbsp&nbsp&nbsp&nbsp<p1>800-2345-6789<p1></br>
+<p2>call us mow to getfree business consultation from our experts!</p2></div>
+</header>
+</div></div>
+<nav>
+<a href="active">Home</a>
+<a href="#">About</a>
+<a href="#">Typography</a>
+<a href="#">contects</a>
+</nav></br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+ 
+
+<img src="C:\Users\admin\Downloads\Landscape-color.jpg" width="100% height="30%">
+
+  <div class="text">Helping with any of your business needs!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+<img src="C:\Users\admin\Downloads\img_forest.jpg" width="100% height="80%">
+  
+  <div class="text">The best strategies for your business</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<img src="C:\Users\admin\Downloads\img_lights.jpg"width="100% height="30%" >
+  
+  <div class="text">A wide range of global business information</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+</div>
+<div class="research">
+<i class="fa fa-globe"style="font-size:48px;color:white"></i></br>
+<h2> global</h2>
+<h3>research</h3></br>
+<p> Lorem ipsum dolor sit amet cinse ctetur adipisicing elit,sed do einusmod tempor incididunt ut labore et dolore magna aliqua.ut enim ad minim veniam,quis nostrud.</p>
+</div>
+<div class="creative">
+<i class="fa fa-lightbulb-o"style="font-size:48px;color:white"></i></br>
+<h2>Creative</h2>
+<h3>ideas</h3>
+<p>Experimentum grauiter ducunt ad azureus terror.hercle,omnia altus!, gratis olla! hilotae nobilis habena est.Ubi est bassus urbs? Cum adgium prarere, omnes lapsuses.
+</div>
+<div class="reliable">
+<i class="fa fa-cog" style="font-size:48px;color:white"></i></br>
+<h2>Reliable</h2>
+<h3>solutions</h3></br>
+<p> Nunquam convertam examplar.Magnum exemplar diligenter attrahenddams parma est.Apolloniates undas,tanquam pius mensa.Triticums.</p>
+</div>
+<div class="professional">
+<i class="fa fa-briefcase" style="font-size:48px;color:white"></i>
+<h2>Professional</h2>
+<h3>management</h3></br>
+<p>Ubi est lotus usus?Clemens,grandis castors sensim talem de pius,fortis lumen.Scutums sunt historias de pius gallus.cum compater messis,omnes rumores vitare.</p>
+</div>
+<div class="free">
+<i class="fa fa-comments" style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white""></i></br>
+<h2>Free Consultations</h2>
+<p>Lorem ipsum dolor  sit amet cose ctetur adipisicing elit,sed do einusmod tempor incididunt ut labore et dolor.</p>
+</div></br>
+<div class="qualified">
+<i class="fa fa-group" style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white""></i></br>
+<h2>Qualified Team</h2>
+<p>Barbatus,flavum genterixs tandem amor de salvus, festus vortex. Audax,pertius apstiis saepe aperto de.</p>
+</div></br>
+<div class="extensive">
+<i class="fa fa-calendar-o" style="font-size:40px; background-color:blue;width:70px; height:70px;color:white"></i>
+<h2> Extensive Service</h2>
+<p>Fidess sunt ignigenas de secundus zirbus.A falsis, bubo fortis vita.Festus particula unus quaestios palus est.</p>
+</div></br>
+<div class="customer">
+<i class="fa fa-thumbs-o-up"style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white"></i>
+<h2>99% Satisfied Customer</h2>
+<p>Amicitia moris, tanquam brevis mons, Sunt sensoremes experirntia brabatus,castus cannsbises.Varius palus.</p>
+</div></br>
+<div class="about">
+<h2 style="text-align:left">About</h2>
+<img src="C:\Users\admin\Downloads\ZiClJf-1920w.jpg" width="500px; height="200px">
+<p>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt alique.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ea ea commodo consequat.Duis aute irure dolor in reprehenderit in volupate velit ease cillium dolor eu fugiat nulla paritau.
+</br>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt.Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt</p>
+</br><button style="text-align:left">READ MORE</button>
+<div></br></br>
+<div class="service">
+<h2>Services</h2>
+<p>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt alique.Ut enim ad minim veniam.</p>
+<div class="process">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCash management</p></br>
+  </div>
+<div class="management">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProcess Development</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHR Management</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Marketing Strategies</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCash Flow Management</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Strategies</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCfo Services</p></br>
+  </div>
+<div class="process">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness plans</p></br>
+  </div>
+<div class="hr">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTax Planning Strategies</p></br>
+  </div></br><button><a href="#" >READ MORE</a></button></br></br>
+
+<div class="help">
+<h2 style="border-bottom:1px solid gray">Help center</h2>
+<h2 style="border-bottom:1px solid gray; font-size:18px">Ask professionals:</br>
+Monday-Friday:8am-7pm<br>
+Saturday:8am-5pm</br>
+Sunday:1pm-5pm</h2></br>
+<h2 style="border-bottom:1px solid gray; font-size:18px"> 24/7Online Support:</br>
+800-2345-6789</br></h2>
+</div></br>
+
+<div class="slideshow-container2">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+ 
+
+<img src="C:\Users\admin\Downloads\Landscape-color.jpg" width="700px height="500px">
+  <div class="text">Helping with any of your business needs!</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+
+  <img src="C:\Users\admin\Downloads\happy-single-businessman-6751588.jpg" width="700px height="500px">
+  <div class="text">The best strategies for your business</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<img src="C:\Users\admin\Downloads\img_lights.jpg"width="700px height="500px " >
+  
+  <div class="text">A falsis ,amor brevis victrix.Cum tables credere,omnes particulaes talem barbatus,audax hydraes.</br>Walter Evans</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:right">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+</div>
+<div class="road">
+<i class="fa fa-location"></i>
+<p>4578 Marmora Road, Glasgow D04 89GR</p></br>
+<i class="fa fa-massege"></i>
+<p>info@demolink.org</p></br>
+<i class="fa fa-phone"></i></br>
+<p>800-2345-6789<p>
+<i class="fa fa-phone"></i>
+<p>800-2345-67890</p></br>
+<i class="fa fa-facebook"></i>
+<p> Follow on Facebook<p></br>
+<i class="fa fa-Twitter"></i>
+<p>Follow on twitter</p>
+</div>
+</body>
+</html>
