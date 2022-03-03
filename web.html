@@ -1,0 +1,839 @@
+<html>
+<head>
+<title>Project</title>
+</head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ebf5fc;
+margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+
+}
+
+.container {
+    display: inline-flex;
+    justify-content: left;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0px ;
+margin-top:20px;
+float:left;
+
+background-color:gray;
+}
+
+.container .card {
+    position: relative;
+    width: 24%;
+    height: 400px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+                5px 5px 5px rgba(0, 0, 0, 0.05),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.container .card .box {
+    display:inline- flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 20px;
+    bottom: 20px;
+    background: blue;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 500ms linear,
+                box-shadow 500ms linear,
+                background 500ms linear;
+}
+
+.container .card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+}
+
+.container .card .box .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.02);
+    transition: color 500ms linear;
+}
+
+.container .card:hover .box .content h2 {
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.container .card .box .content h3 {
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: color 500ms linear;
+}
+
+.container .card .box .content p {
+    font-size: 1em;
+    font-weight: 100;
+    color: #777;
+    z-index: 1;
+    transition: color 500ms linear;
+}
+
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p {
+    color: #fff;
+}
+
+.container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 2px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card:hover .box .content a {
+    background: #ff568f;
+}
+
+@media only screen and (max-width: 1140px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+
+#nav {border:1px solid black;
+}
+#nav>ul{
+background-color:gray;
+width:100%;
+}
+#nav ul {
+list-style:none;
+position:relative;
+margin:0;
+padding:0;
+float:left;
+
+}
+#nav ul a {
+color:white;
+text-decoration:none;
+font-size:15px;
+line-height:42px;
+padding:0 15px;
+font-weight:bold;
+display:inline-block;
+}
+#nav ul li {
+float:left;
+position:relative;
+margin:0;
+padding:0;
+}
+#nav ul li:hover {
+background-color:blue;
+}
+#nav ul ul {
+position:absolute;
+background-color:blue;
+top:100%;
+left:0;
+display:none;
+}
+#nav ul ul li {
+float:none;
+width:200px;
+}
+#nav ul ul ul{
+top:0px;
+left:100%;
+}
+#nav ul li:hover>ul {
+display:block;
+}
+button {
+width:100px;
+padding:5px;
+margin-left:300px;
+}
+.header {
+color:blue;
+height:50px;
+display:inline-block;
+}
+.inlineul{
+display:inline-flex;
+marign:auto;
+border:none;
+}
+.output {
+display:inline-flex;
+position:right;
+backround-color:black;
+}
+h1 {
+font-size:30px;
+margin:top;
+}
+p3,p2{
+margin-top:30px;
+color:black;
+
+}
+p1:hover {
+margin-top:30px;
+color:black;
+}
+
+i1 {
+margin-top:0px;
+}
+i2:hover  {
+margin-top:40px;
+width:20px;
+}
+
+span {
+margin-top:30px;
+color:black;
+height:20px;
+background-color:yellow;
+text-transfore:uppercase;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides1,.myslides2 {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container{
+  max-width:100%;
+margin-top:50px;
+  position: relative;
+  margin: auto;
+margin-left:0px;
+justify-content:center;
+
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 50%;
+  text-align: right;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 800px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.free {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:0px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid gray;
+}
+.qualified{
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:0px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid gray;
+}
+.extensive {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:0px;
+padding:30px;
+border:2px bottom;
+border-bottom:3px  solid blue;
+}
+.customer {
+background-color:white;
+width:60%;
+height:300px;
+border:none;
+text-align:center;
+margin-left:0px;
+padding:30px;
+border-bottom:3px  solid blue;
+}
+.about {
+background-color:white;
+width:50%;
+height:800px;
+
+text-align:left;
+margin-left:0px;
+padding:30px;
+border-right:1px solid gray;
+}
+.service {
+background-color:white;
+width:50%;
+height:30px;
+
+text-align:left;
+margin-left:0px;
+padding:30px;
+}
+
+button {
+text-align:left;
+color:white;
+width:100px;
+height:40px;
+justify-content:left;
+background-color:blue;
+float:left;
+}
+.fa {
+color:blue;
+font-size:20px;
+
+}
+.process {
+background-color:white;
+width:80%;
+height:700px;
+text-align:left;
+margin-left:0px;
+padding:30px;
+border:none;
+
+}
+
+.help {
+background-color:blue;
+float:left;
+width:20%;
+height:400px;
+padding:30px;
+margin-left:20px;
+
+}
+.noster {
+background-color:gray;
+float:right;
+}
+
+.void {
+display:inline-flex;
+grid-template-columns:100px;
+grid-template-row:210px 210px 40px;
+grid-template-areas:"research" "text" "status";
+width:100%;
+height:500px;
+padding:0px;
+margin:auto;
+}
+
+.search {
+display:inline-flex;
+grid-template-columns:100px;
+grid-template-row:210px 210px 40px;
+grid-template-areas:"research" "text" "status";
+width:100%;
+height:500px;
+padding:0px;
+margin:auto;
+
+}
+.main {
+display:inline-flex;
+grid-template-columns:100px;
+grid-template-row:210px 210px 40px;
+grid-template-areas:"research" "text" "status";
+width:100%;
+height:900px;
+padding:0px;
+margin:auto;
+border-bottom:1px solid gray;
+}
+.center {
+display:inline-flex;
+width:100%;
+height:500px;
+padding:0px;
+margin:auto;
+}
+
+.road{
+background-color:gray;
+width:100%;
+height:100px;
+text-align:left;
+padding:30px;
+
+display:inline-flex;
+}
+
+
+.phone {
+background-color:gray;
+width:100%;
+height:100px;
+text-align:left;
+padding:30px;
+border-bottom:3px solid white;
+display:inline-flex;
+}
+.content{
+display:flex;
+justify-content:center;
+margin:40px;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+<div class="header">
+<div class="inlineul">
+
+<h1 style=" font-size:40px"><i1 class="fa fa-align-justify">&nbsp&nbsp&nbspBusiness</i1> </h1>
+</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>Free</span><p3>company</p3>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i2 class="fa fa-phone"></i2>&nbsp&nbsp&nbsp&nbsp<p1>800-2345-6789</p1></br>
+
+<p2>call us mow to getfree business consultation from our experts!</p2></div>
+</header>
+</div>
+<div id="nav">
+<ul>
+<li><a href="#">Home</a></li>
+<li>
+<a href="#">About</a>
+<ul>
+<li><a href="#">Who We Are</a></li>
+<li><a href="#">Our History</a></li>
+<li>
+<a href="#">OurServices</a>
+<ul>
+<li><a href="#">Business Consulting</a></li>
+<li><a href="#">Cash Management</a></li>
+<li><a href="#">Tax Advisory</a></li>
+</li>
+</ul>
+<li><a href="#">Testimonials</a></li>
+<li><a href="#">Our Team</a></li>
+<li><a href="#">News</a></li>
+</ul>
+</li>
+<li><a href="#">Typography</a></li>
+<li><a href="#">contects</a></li>
+</ul>
+</div></br></br></br></br>
+<div class="slideshow-container">
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="C:\Users\admin\Downloads\Landscape-color.jpg" width="80%">
+  <div class="text"> Lorem ipsum dolor sit amet cinse ctetur adipisicing elit</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="C:\Users\admin\Downloads\happy-single-businessman-6751588.jpg" width="90%">
+  <div class="text"> Lorem ipsum dolor sit amet cinse ctetur adipisicing elit</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="C:\Users\admin\Downloads\img_lights.jpg"width="80%">
+  <div class="text"> Lorem ipsum dolor sit amet cinse ctetur adipisicing elit</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+  
+
+</script>
+
+
+
+<div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <i class="fa fa-globe"style="font-size:48px;color:white"></i></div>
+      <h3> global</h3>
+
+      <h4>research</h4>
+      <p> Lorem ipsum dolor sit amet cinse ctetur adipisicing elit,sed do einusmod tempor </br>incididunt ut labore et dolore magna aliqua.ut enim ad minim veniam,quis nostrud.</p>
+                        
+                        
+                      
+                       
+                            
+   
+                        
+                   
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                       <i class="fa fa-lightbulb-o"style="font-size:48px;color:white"></i></br> </div>  
+<h3>Creative</h3>
+<h4>ideas</h4>
+<p>Experimentum grauiter ducunt ad azureus terror.hercle,omnia altus!, gratis olla! hilotae nobilis </br>habena est.Ubi est bassus urbs? Cum adgium prarere, omnes lapsuses.
+                        
+                    
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        
+                        <i class="fa fa-cog" style="font-size:48px;color:white"></i></br></div>
+<h3>Reliable</h3>
+<h4>solutions</h4>
+<p> Nunquam convertam examplar.Magnum exemplar diligenter attrahenddams parma est.Apolloniates undas,tanquam pius mensa.Triticums.</p>
+                     
+                   
+                </div>
+            </div>
+<div class="card">
+                <div class="box">
+                    <div class="content">
+                          <i class="fa fa-briefcase" style="font-size:48px;color:white"></i></div>
+<h3>Professional</h3>
+<h4>management</h4>
+<p>Ubi est lotus usus?Clemens,grandis castors sensim talem de pius,fortis lumen.Scutums sunt historias de pius gallus.cum compater messis,omnes rumores vitare.</p>
+      
+      
+                    </div>   
+                    
+              
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+<div class="void">
+<div class="free">
+<i class="fa fa-comments" style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white""></i></br>
+<h2>Free Consultations</h2>
+<p>Lorem ipsum dolor  sit amet cose ctetur adipisicing elit,sed do einusmod tempor incididunt ut labore et dolor.</p>
+</div></br>
+<div class="qualified">
+<i class="fa fa-group" style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white""></i></br>
+<h2>Qualified Team</h2>
+<p>Barbatus,flavum genterixs tandem amor de salvus, festus vortex. Audax,pertius apstiis saepe aperto de.</p>
+</div></br></div>
+<div class="search">
+<div class="extensive">
+<i class="fa fa-calendar-o" style="font-size:40px; background-color:blue;width:70px; height:70px;color:white"></i>
+<h2> Extensive Service</h2>
+<p>Fidess sunt ignigenas de secundus zirbus.A falsis, bubo fortis vita.Festus particula unus quaestios palus est.</p>
+</div></br>
+<div class="customer">
+<i class="fa fa-thumbs-o-up"style="font-size:40px;background-color:blue; width:70px; height:70px ;color:white"></i>
+<h2>99% Satisfied Customer</h2>
+<p>Amicitia moris, tanquam brevis mons, Sunt sensoremes experirntia brabatus,castus cannsbises.Varius palus.</p>
+</div></div>
+<div class="main">
+<div class="about">
+<h2 style="text-align:left">About</h2>
+<img src="C:\Users\admin\Downloads\ZiClJf-1920w.jpg" width="200px; height="200px">
+<p>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt alique.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ea ea commodo consequat.Duis aute irure dolor in reprehenderit in volupate velit ease cillium dolor eu fugiat nulla paritau.
+</br>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt.Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt</p>
+</br><button style="text-align:left">READ MORE</button>
+</div></br></br>
+<div class="service">
+<h2>Services</h2>
+<p>Lorem ipsum dolor sit amet conse cteture adipisicing elit,sed do eiusmod tempor indididunt alique.Ut enim ad minim veniam.</p>
+<div class="process">
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCash management</p></br>
+
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProcess Development</p></br>
+  
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHR Management</p></br>
+
+ <p class="ele1"><i1 class="fa fa-check check "></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Marketing Strategies</p></br>
+
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCash Flow Management</p></br>
+  
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness Strategies</p></br>
+  
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCfo Services</p></br>
+  
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness plans</p></br>
+  
+ <p class="ele1"><i1 class="fa fa-check check "></i1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTax Planning Strategies</p></br>
+  
+  <a href="#" ><button style="color:white; text-align:center">READ MORE</button></a></br></br>
+</div></div><br>
+
+<div class="help">
+<h2 style="border-bottom:1px solid gray">Help center</h2>
+<h2 style="border-bottom:1px solid gray; font-size:18px">Ask professionals:</br>
+Monday-Friday:8am-7pm<br>
+Saturday:8am-5pm</br>
+Sunday:1pm-5pm</h2></br>
+<h2 style="border-bottom:1px solid gray; font-size:18px"> 24/7Online Support:</br>
+800-2345-6789</br></h2>
+</br></br></br></br>
+<div class="slideshow-container">
+
+<div class="mySlides">
+ <img src="C:\Users\admin\Downloads\Landscape-color.jpg" width="200px">
+  <q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q>
+  <p class="author" style="color:blue">- John Keats</p>
+</div>
+
+<div class="mySlides">
+ <img src="C:\Users\admin\Downloads\happy-single-businessman-6751588.jpg" width="200px">
+  <q>But man is not made for defeat. A man can be destroyed but not defeated.</q>
+  <p class="author" style="color:blue">- Ernest Hemingway</p>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container2">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.dis
+
+
+
+
+</script>
+
+</div></div>
+
+</div></div></br></br></br>
+
+<div class="road">
+
+<i class="fa fa-map-marker"style="font-size:24px;color:blue;padding:10px;background-color:white"></i>
+<p>4578 Marmora Road, Glasgow D04 89GR</p></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<i class="fa fa-envelope-o"style="font-size:24px;color:blue;padding:10px;background-color:white"></i></br>
+<p>info@demolink.org</p></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<i class="fa fa-phone"style="font-size:24px;color:blue;padding:10px;background-color:white"></i></br></br></br></br></br>
+<p style="width:100px">800-2345-6789</p>
+</div>
+<div class="phone">
+<i class="fa fa-phone" style="font-size:24px;color:blue;padding:10px;background-color:white"></i></br>
+<p>800-2345-67890</p></br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<i class="fa fa-facebook"style="font-size:24px;color:blue;padding:10px;background-color:white"></i></br>
+<p> Follow on Facebook</p></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<i class="fa fa-Twitter"style="font-size:24px;color:blue;padding:10px;background-color:white;text-align:center"></i></br></br></br>
+
+<p>Follow on twitter</p>
+</div>
+
+</body>
+</html>
