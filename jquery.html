@@ -1,0 +1,52 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="jquery.nice-number.css" rel="stylesheet">
+<link rel="stylesheet"href="Number-Input-Spinner.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src=jquery.nice-number.js"></script>
+<script .type="text/javascript">
+$(function(){
+
+  $('input[type="number"]').niceNumber();
+
+});
+</script>
+<title> jquery</title>
+</head>
+<style>
+body {
+margin:0;
+padding:0;
+background:#ecff88;
+}
+.box {
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+}
+input {
+border:none;
+outline:none;
+padding:5px;
+border-radius:5px;
+box-shadow:0 2px 5px rgba(0,0,0,.5);
+
+}
+input:hover,input:focus{
+background:#ff008b;
+color:#fff;
+}
+button {
+background:red; }
+</style>
+<body>
+<div class="box">
+<input type="number"value="1">
+</div>
+
+</body>
+</html>
