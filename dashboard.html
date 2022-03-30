@@ -1,0 +1,612 @@
+<Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible content="IE=edge">
+
+<title>responsive dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'poppins',sans-serif;
+
+}
+body{
+overflow:hidden;
+width:100%;
+height:100%;
+}
+.container{
+position:relative;
+width:100%;
+
+}
+.navigation{
+position:fixed;
+width:180px;
+height:100%;
+background-color:blue;
+transition:0.5s;
+overflow:hidden;
+padding:10px;
+}
+.navigation .active{
+width:60px;
+}
+.navigation ul{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:5px;
+}
+.navigation ul li{
+position:relative;
+width:100%;
+list-style:none;
+}
+.navigation ul li:hover{
+background:pink;
+}
+.navigation ul li:nth-child(1):hover{
+background:transparent;
+}
+.navigation ul li a{
+position:relative;
+display:block;
+width:100%;
+display:flex;
+text-decoration:none;
+color:white;
+}
+.navigation ul li a span
+
+{
+position:relative;
+display:block;
+width:100%;
+height:60px;
+line-height:60px;
+text-align:center;
+}
+.navigation ul li a   i
+{
+color:white;
+font-size:24px;
+margin-top:15px;
+}
+.navigation ul li a title{
+position:relative;
+display:block;
+padding:0 10px;
+height:60px;
+line-height:60px;
+white-space:norap;
+
+}
+.main{
+position:absolute;
+width:calc(100%-300px);
+left:200px;
+height:100px;
+background-color:white;
+transition:0.5s;
+}
+.main.active{
+width:calc(100%-40px);
+}
+.main .topbar{
+width:100%;
+background-color:white;
+height:60px;
+display:flex;
+justify-content:space-between;
+
+align-item:center;
+
+}
+.toggle{
+width:60px;
+height:60px;
+position:relative;
+
+cursor:pointer;
+}
+.toggle::before{
+content:'\f0c9 ';
+font-family:fontAwesome;
+position:absolute;
+height:100%;
+width:100%;
+line-height:60px;
+font-size:24px;
+text-align:center;
+color:black;
+}
+.search{
+position:relative;
+width:400px;
+margin:0 10px;
+}
+.search label{
+position:relative;
+width:100%;
+}
+.search label input{
+width:100%;
+height:40px;
+border-radius:40px;
+padding:5px 20px;
+padding-left:35px;
+outline:none;
+border:2px solid black;
+}
+.search label .fa{
+position:absolute;
+top:4px;
+left:15px;
+}
+.user{
+position:relative;
+min-width:50px;
+border-radius:50px;
+height:50px;
+overflow:hidden;
+width:50px;
+}
+.user img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-filter:cover;
+}
+.cardbox{
+position:relative;
+width:100%;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+grid-gap:20px;
+}
+.cardbox .card{
+position:relative;
+background:gray;
+padding:20px;
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+.cardbox .card .number{
+font-size:24px;
+font-width:500;
+position:relative;
+}
+.cardbox .card .cardname{
+color:white;
+}
+.cardbox .card .iconbox{
+font-size:25px;
+color:red;
+}
+.details{
+position:relative;
+width:100%;
+padding:10px;
+display:grid;
+grid-gap:20px;
+grid-template-coloumns:2fr 1fr;
+
+}
+.details .recentorder{
+position:relative;
+display:grid;
+padding:20px;
+background:gray;
+height:300px;
+}
+.cardholder{
+display:flex;
+justify-content:space-between;
+align-item:flex-start;
+}
+.cardholder h1{
+font-width:6px;
+}
+
+.btn{
+position:relative;
+padding:5px 10px;
+background:blue;
+color:white;
+height:35px;
+text-decoration:none;
+
+}
+
+.details table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+.details table thead td{
+font-weight:6px;
+}
+.details .recentorder table tr{
+border-bottom:2px solid black;
+
+}
+
+.details .recentorder table tbody tr:hover{
+background:blue;
+color:white;
+}
+
+.details .recentorder table tbody tr:last-child{
+border-bottom:none;
+}
+.details .recentorder table tr td{
+padding:9px 5px;
+
+}
+.details .recentorder table tbody tr td:last-child, 
+.details .recentorder table thead tr td:last-child{
+text-align:right;
+}
+
+.details .recentorder table tbody tr td:nth-child(2), 
+.details .recentorder table thead tr td:nth-child(2){
+text-align:center;
+padding-right:40px;
+}
+
+.details .recentorder table tbody tr td:nth-child(3), 
+.details .recentorder table thead tr td:nth-child(3){
+text-align:center;
+
+}
+.status {
+position:relative;
+padding:2px 4px;
+background:red;
+color:white;
+font-size:14px;
+font-weight:300;
+border-radius:2px;
+}
+.deliverd{
+background:green;
+
+}
+ .recentcustomer{
+position:relative;
+padding:20px ;
+display:grid;
+min-height:300px;
+background-color:gray;
+}
+ .recentcustomer .imgbox{
+position:relative;
+width:40px;
+height:40px;
+border-radius:50%;
+overflow:hidden;
+
+}
+ .recentcustomer .imgbox img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.recentcustomer table tr:hover{
+background:blue;
+color:white;
+}
+.recentcustomer table tr td{
+padding:7px 10px;
+}
+
+.recentcustomer table tr td h2{
+font-size:24px;
+font-weight:300;
+line-height:1.2m;
+}
+.recentcustomer table tr td span{
+font-size:16px;
+font-weight:300;
+line-height:1.2m;
+}
+
+@media(max-width:992px){
+.navigation{
+left:300px;
+}
+.navigation .active{
+left:0px;
+}
+.main{
+width:100%;
+left:0px;
+}
+.main .active{
+width:calc(100%-300px);
+left:300px;
+}
+.cardbox{
+grid-template:repeat(2,1fr);
+}
+}
+@media(max-width:764px){
+.details{
+grid-template:repeat(1,1fr);
+}
+
+.cardreader h2{
+font-size:18px;
+font-weight:300;
+}
+}
+@media(max-width:400px){
+.cardbox{
+grid-template:repeat(1,1fr);
+}
+.details .recentorder {
+overflow:active;
+}
+.details .recentorder table{
+width;600px;
+}
+.navigation{
+width:100%;
+left:-100%;
+z-index:1000;
+}
+.navigation .active{ 
+width:100%;
+left:0;
+}
+.toggle .active{
+z-index:1000;
+right:0;
+left:initial;
+position:fixed;
+
+}
+.toggle .active:before{
+color:white;
+}
+.main ,
+main .active{
+width:100%;
+left:0px;
+}
+}
+
+
+</style>
+
+<div class="container">
+<div class="navigation">
+<ul>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-apple" aria-hidden="true"></i></span>
+
+<span class="title"><h2>Brand Name</h2></span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+<span class="title">Dashboard</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+<span class="title">Customer</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-comments" aria-hidden="true"></i></span>
+<span class="title">Messages</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-info" aria-hidden="true"></i></span>
+<span class="title">Help</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+<span class="title">Setting</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+<span class="title">Password</span>
+</a>
+</li>
+<li>
+<a href="#>
+<span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+<span class="title">sign out</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="main">
+<div class="topbar">
+<div class="toggle" onclick="toggleMenu();"></div>
+<div class="search">
+<label>
+<input type="text"placeholder="search here">
+<i class="fa fa-search" aria-hidden="true"></i>
+</label>
+</div>
+<div class="user">
+<img src="C:\Users\admin\Downloads\port4.jpg" style="width:100px; height:60px">
+</div>
+</div>
+<div class="cardbox">
+<div class="card">
+<div>
+<div class="number">1,043</div>
+<div class="cardname">Daily View</div>
+</div>
+<div class="iconbox">
+<i class="fa fa-eye" aria-hidden="true"></i>
+</div>
+
+</div>
+<div class="card">
+<div>
+<div class="number">2.345</div>
+<div class="cardname">sales</div>
+</div>
+<div class="iconbox">
+<i class="fa fa-product-hunt" aria-hidden="true"></i>
+</div>
+</div>
+<div class="card">
+<div>
+<div class="number">3.345</div>
+<div class="cardname">comment</div>
+</div>
+<div class="iconbox">
+<i class="fa fa-comment" aria-hidden="true"></i>
+</div>
+</div>
+<div class="card">
+<div>
+<div class="number">300</div>
+<div class="cardname">earning</div>
+</div>
+<div class="iconbox">
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+</div>
+</div>
+
+<div class="details">
+
+<div class="recentorder">
+<div class="cardholder">
+<h1>Recent order</h1>
+<a href="#" class="btn">View All</a>
+</div>
+
+<table>
+<thead>
+<tr>
+<td>Name</td>
+<td>price</td>
+<td>payment</td>
+<td>status</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Star Registation</td>
+<td>paid</td>
+<td>54768</td>
+<td><span class="status deliverd">Delivery</span></td>
+
+</tr>
+<tr>
+<td>Window</td>
+<td>2345</td>
+<td>Due</td>
+<td><span class="status deliverd">panding</span></td>
+
+</tr>
+<tr>
+<td>Speaker</td>
+<td>paid</td>
+<td>54768</td>
+<td><span class="status return">Return</span></td>
+
+</tr>
+<tr>
+<td>laptop</td>
+<td>paid</td>
+<td>56876</td>
+<td><span class="status deliverd">payment</span></td>
+
+</tr>
+<tr>
+<td>mobile</td>
+<td>paid</td>
+<td>56876</td>
+<td><span class="status return">Return</span></td>
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="recentcustomer">
+<div class="cardholder">
+<h1>Recent customer</h1>
+</div>
+<table>
+<tbody>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port4.jpg"></div></td>
+<td><h2>David<br><span>Itally</span></h2></td>
+</tr>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port3.jpg"></div></td>
+<td><h2>Parkesh<br><span>India</span></h2></td>
+</tr>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port5.jpg"></div></td>
+<td><h2>Dav<br><span>japan</span></h2></td>
+</tr>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port6.jpg"></div></td>
+<td><h2>Ravi<br><span>Itally</span></h2></td>
+</tr>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port7.jpg"></div></td>
+<td><h2>Bharti<br><span>India</span></h2></td>
+</tr>
+<tr>
+<td width="60px"><div class="imgbox"><img src="C:\Users\admin\Downloads\port1.jpg"></div></td>
+<td><h2>Saliesh<br><span>Itally</span></h2></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<script>
+function toggleMenu(){
+let toggle=document.quarySelector('.toggle');
+let navigation=document.quarySelector('.navigation');
+let main=document.quarySelector(".main");
+toggle.classList.toggle('active');
+navigation.classList.toggle('active');
+main.classList.toggle('active');
+}
+</script>
+</body>
+</html>
+
