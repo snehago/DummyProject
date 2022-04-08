@@ -1,0 +1,73 @@
+<Doctype html>
+<html>
+    <head>
+        <title>ludo</title>
+        <meta charset="Utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Acme"rel="stylesheet">
+    </head>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            font-family: 'Acme',sans-serif;
+        }
+        body{
+            background-color: #0a3d62;
+        }
+        h1{
+            margin: 30px;
+            text-shadow: 5px 0 white ;
+            font-size: 6rem;
+            color: #f6b93b;
+        }
+        p{
+            font-size: 2rem;
+            color: #00b894;
+            text-shadow: 1px 1px white;
+        }
+        button{
+            padding: 10px;
+            background-color: #00b894;
+            color: aliceblue;
+            border: none;
+
+        }
+        img{
+            width: 75%;
+
+        }
+        .container{
+            width:70%;
+            margin: auto;
+            text-align: center;
+        }
+        .dice{
+            text-align: center;
+            display: inline-block;
+        }
+
+        </style>
+    <body>
+<div class="container">
+    <h1>js ludo</h1>
+<div class="dice">
+<p>player 1</p>
+<img src="C:\Users\pc\Downloads\images (2).png" id="check1"  >
+</div>
+<div class="dice">
+    <p>Player 2</p>
+    <img src="C:\Users\pc\Downloads\images (1).png">
+</div>
+<div>
+<button onclick="ludogame()">click me</button>
+</div>
+</div>
+<script>
+     ludogame=()=>{
+   const player1= Math.floor(Math.random()*6)+1;
+const player1dice="Downloads/images${play1}.png";
+document.getElementById('check1').setAttribute('src',play1dice);
+</script>
+
+    </body>
+</html>
