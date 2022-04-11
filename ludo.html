@@ -52,22 +52,24 @@
     <h1>js ludo</h1>
 <div class="dice">
 <p>player 1</p>
-<img src="C:\Users\pc\Downloads\images (2).png" id="check1"  >
+<img src="E:/task/bharti_task/DummyProject/download/images%20(1).png" id="check1"  >
 </div>
 <div class="dice">
     <p>Player 2</p>
-    <img src="C:\Users\pc\Downloads\images (1).png">
+    <img src="E:/task/bharti_task/DummyProject/download/images%20(1).png">
 </div>
 <div>
 <button onclick="ludogame()">click me</button>
 </div>
 </div>
 <script>
-     ludogame=()=>{
-   const player1= Math.floor(Math.random()*6)+1;
-const player1dice="Downloads/images${play1}.png";
-document.getElementById('check1').setAttribute('src',play1dice);
+    
+    ludogame=()=>{
+        debugger;
+        const player1= Math.floor(Math.random()*6)+1;
+        const player1dice="E:/task/bharti_task/DummyProject/download/images ("+player1+").png";
+        document.getElementById('check1').setAttribute('src',player1dice);
+    };
 </script>
-
     </body>
 </html>
